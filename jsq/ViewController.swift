@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var x: UITextField!
-    @IBOutlet weak var z: UITextField!
     @IBOutlet weak var y: UITextField!
     
     @IBAction func add(sender: UIButton) {
