@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "851065D7A2749990C7AD9566919341F88BA642E4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C16CFE347EAE78841D6A1BBDA45E5E28D1E5F559" : 0,
+    "851065D7A2749990C7AD9566919341F88BA642E4" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A4F0A663-F32F-46C0-8D75-D855FA064E28",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C16CFE347EAE78841D6A1BBDA45E5E28D1E5F559" : "",
+    "851065D7A2749990C7AD9566919341F88BA642E4" : "jsq\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "jsq",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "jsq.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/stonepeak\/jsq.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "851065D7A2749990C7AD9566919341F88BA642E4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/stonepeak\/20131105818shifeng.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C16CFE347EAE78841D6A1BBDA45E5E28D1E5F559"
+    }
+  ]
+}
