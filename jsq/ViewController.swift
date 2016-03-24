@@ -32,26 +32,25 @@ class ViewController: UIViewController {
         
         let value = sender.currentTitle!
         
-        if value == "+"||value == "-"||value == "*"||value == "/"{
+        if(value == "+" || value == "-" || value == "*" || value == "/") {
             operand = value
-        print(value)
             return
         }else if(value == "="){
-        var result = 0
-        result = Int(operand1)! + Int(operand2)!
-        resultLable.text = "\(result)"
-            operand = ""
-            operand1 = ""
-            operand2 = ""
-        return
+          var result = 0
+          result = Int(operand1)! + Int(operand2)!
+          resultLable.text = "\(result)"
+          operand = ""
+          operand1 = ""
+          operand2 = ""
+          return
         }
         
         if operand == ""{
            operand1 = operand1 + value
-            resultLable.text = operand1
+           resultLable.text = operand1
         }else{
-        operand2 = operand2 + value
-            resultLable.text = operand2
+          operand2 = operand2 + value
+           resultLable.text = operand2
         }
         
     }
