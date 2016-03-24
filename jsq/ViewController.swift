@@ -10,23 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var x: UITextField!
-    @IBOutlet weak var y: UITextField!
-    
-    @IBAction func add(sender: UIButton) {
-        var a:Double!=0
-        var b:Double!=0
-        var c:Double!=0
-        if(!x.text!.isEmpty){
-            a=(x.text! as NSString).doubleValue
-        }
-        if(!y.text!.isEmpty){
-            b=(y.text! as NSString).doubleValue
-        }
-        c=a+b
-        z.text="\(c)"
+    @IBOutlet weak var resultLable: UILabel!
+    var operand1:String = ""
+    var operand2:String = ""
+    var operand:String = ""
+       
         
-    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -38,5 +28,32 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func button(sender: UIButton) {
+        
+        let value = sender.currentTitle!
+        
+        if value == "+"||value == "-"||value == "*"||value == "/"{
+            operand = value
+        print(value)
+            return
+        }else if(value == "="){
+        var result = 0
+        result = Int(operand1)! + Int(operand2)!
+        resultLable.text = "\(result)"
+            operand = ""
+            operand1 = ""
+            operand2 = ""
+        return
+        }
+        
+        if operand == ""{
+           operand1 = operand1 + value
+            resultLable.text = operand1
+        }else{
+        operand2 = operand2 + value
+            resultLable.text = operand2
+        }
+        
+    }
 }
 
