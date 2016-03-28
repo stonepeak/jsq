@@ -11,9 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var resultLable: UILabel!
-    var operand1:String = ""
-    var operand2:String = ""
-    var operand:String = ""
+    var n1: String = ""
+    var n2: String = ""
+    var operand: String = ""
        
         
    
@@ -29,30 +29,42 @@ class ViewController: UIViewController {
 
 
     @IBAction func button(sender: UIButton) {
-        
         let value = sender.currentTitle!
-        
-        if(value == "+" || value == "-" || value == "*" || value == "/") {
+        if value == "AC" {
+            n1 = ""
+            n2 = ""
+            resultLable.text = ""
+            return
+        } else if value == "+"||value == "-"||value == "*"||value == "/"{
             operand = value
             return
-        }else if(value == "="){
-          var result = 0
-          result = Int(operand1)! + Int(operand2)!
+        }else if value == "="{
+          var result = 0.0
+            switch operand{
+                case "+":
+                result = Double(n1)! + Double(n2)!
+                 resultLable.text = "result"
+            default:
+                result = 0
+            
+            }
+          
           resultLable.text = "\(result)"
           operand = ""
-          operand1 = ""
-          operand2 = ""
+          n1 = ""
+          n2 = ""
           return
         }
-        
-        if operand == ""{
-           operand1 = operand1 + value
-           resultLable.text = operand1
-        }else{
-          operand2 = operand2 + value
-           resultLable.text = operand2
+        if operand  == ""{
+            n1 = n1 + value
+            resultLable.text = "\(n1)"
+            return
         }
-        
+        else {
+            n2 = n2 + value
+            resultLable.text = "\(n2)"
+            return
+        }
     }
 }
 
