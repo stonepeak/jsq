@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLable: UILabel!
     var n1: String = ""
     var n2: String = ""
+    var pointLoop: Bool = false
+    var isSecond: Bool = false
     var operand: String = ""
        
         
@@ -44,6 +46,15 @@ class ViewController: UIViewController {
                 case "+":
                 result = Double(n1)! + Double(n2)!
                  resultLable.text = "result"
+            case "-":
+                result = Double(n1)! - Double(n2)!
+                resultLable.text = "result"
+            case "*":
+                result = Double(n1)! * Double(n2)!
+                resultLable.text = "result"
+            case "/":
+                result = Double(n1)! / Double(n2)!
+                resultLable.text = "result"
             default:
                 result = 0
             
@@ -65,6 +76,26 @@ class ViewController: UIViewController {
             resultLable.text = "\(n2)"
             return
         }
+    }
+    
+    @IBAction func point(sender: UIButton) {
+    if(!pointLoop)
+    {
+        if(!(resultLable.text! == "")){
+              resultLable.text! == ".";
+            pointLoop=true;
+        }
+    }
+        /*if !decimalPointFlag {
+            resultLable.text = resultLable.text! + "."
+            if isSecond {
+                n2 = (resultLable.text! as NSString).doubleValue
+            }else {
+                n1 = (resultLable.text! as NSString).doubleValue
+            }
+            decimalPointFlag = !decimalPointFlag
+        }*/
+
     }
 }
 
