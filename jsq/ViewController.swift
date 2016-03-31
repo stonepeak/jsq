@@ -13,8 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLable: UILabel!
     var n1: String = ""
     var n2: String = ""
+    
     var pointLoop: Bool = false
-    var isSecond: Bool = false
+    //var isSecond: Bool = false
     var operand: String = ""
        
         
@@ -37,11 +38,13 @@ class ViewController: UIViewController {
             n2 = ""
             resultLable.text = ""
             return
-        } else if value == "+"||value == "-"||value == "*"||value == "/"{
+        } else if value == "+"||value == "-"||value == "*"||value == "/"||value == "x^y"{
             operand = value
+            resultLable.text = ""
             return
         }else if value == "="{
           var result = 0.0
+            
             switch operand{
                 case "+":
                 result = Double(n1)! + Double(n2)!
@@ -54,6 +57,13 @@ class ViewController: UIViewController {
                 resultLable.text = "result"
             case "/":
                 result = Double(n1)! / Double(n2)!
+                resultLable.text = "result"
+            case "x^y":
+                result=1;
+                for(var c=0; c < (Int)(n2) ;c++)
+                {
+                   result =  result * Double(n1)!
+                }
                 resultLable.text = "result"
             default:
                 result = 0
@@ -82,19 +92,11 @@ class ViewController: UIViewController {
     if(!pointLoop)
     {
         if(!(resultLable.text! == "")){
-              resultLable.text! == ".";
+              resultLable.text! += ".";
             pointLoop=true;
         }
     }
-        /*if !decimalPointFlag {
-            resultLable.text = resultLable.text! + "."
-            if isSecond {
-                n2 = (resultLable.text! as NSString).doubleValue
-            }else {
-                n1 = (resultLable.text! as NSString).doubleValue
-            }
-            decimalPointFlag = !decimalPointFlag
-        }*/
+        
 
     }
 }
