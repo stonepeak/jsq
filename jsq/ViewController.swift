@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     var n2: String = ""
     
     var pointLoop: Bool = false
-    //var isSecond: Bool = false
     var operand: String = ""
        
         
