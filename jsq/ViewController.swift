@@ -91,8 +91,8 @@ class ViewController: UIViewController {
     if(!pointLoop)
     {
         if(!(resultLable.text! == "")){
-              resultLable.text! += ".";
-            pointLoop=true;
+              resultLable.text! += "."
+            pointLoop=true
         }
     }
         
